@@ -1,0 +1,419 @@
+@font-face{
+    font-family: "Gilroy";
+    src: url("../font/Gilroy-Regular.ttf");
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face{
+    font-family: "Gilroy";
+    src: url("../font/Gilroy-Semibold.ttf");
+    font-weight: 600;
+    font-display: swap;
+}
+@font-face{
+    font-family: "Gilroy";
+    src: url("../font/Gilroy-Bold.ttf");
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face{
+    font-family: "Gilroy";
+    src: url("../font/Gilroy-Extrabold.ttf");
+    font-weight: 800;
+    font-display: swap;
+}
+@font-face{
+    font-family: "Chronicle Display";
+    src: url("../font/Chronicle-Display-Semibold.otf");
+    font-weight: 600;
+    font-display: swap;
+}
+
+*{
+    box-sizing: border-box;
+}
+*::before,*::after{
+    box-sizing: border-box;
+}
+html, body{
+    position: relative;
+}
+
+body{
+    background-color: #0B1D26;
+    font-family: "Gilroy";
+    font-weight: 700;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.77;
+    color: white;
+}
+
+body.menu-open{
+    overflow-y: hidden;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Chronicle Display";
+    font-weight: 600;
+}
+
+h1{
+    font-size: 3.8em;
+    line-height: 0.88;
+}
+h2, h3, h4, h5, h6{
+    font-size: 3.55em;
+    line-height: 1.1;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1480px;
+    padding: 0 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+.column{
+    flex-basis: 100%;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.mb-30{
+    margin-bottom: 30px;
+}
+header{
+    padding: 20px 10px;
+    position: relative;
+    margin-bottom: -166px;
+}
+
+header .brand{
+    text-align: center;
+}
+
+header .main-menu, header .user-menu {
+    display: none;
+    font-size: 18px;
+}
+
+header .mobile-menu {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: all 300ms linear;
+    font-size: 20px;
+}
+
+header .mobile-menu.active {
+    transform: translateY(0%);
+}
+
+header .mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header .mobile-menu ul li{
+    margin-bottom: 10px;
+}
+
+header .mobile-menu ul li a{
+    color: #354147;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+
+#toggle-mobile-menu {
+    position: absolute;
+    top: 22px;
+    right: 15px;
+    z-index: 999;
+}
+
+#toggle-mobile-menu .hamburger{
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#toggle-mobile-menu .hamburger .icon-bar{
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 4px;
+    background-color: #FBD784;
+    margin-bottom: 3px;
+    border-radius: 4px;
+    transition: all 0.3s;
+    top: 0;
+}
+
+#toggle-mobile-menu .hamburger .icon-bar:last-child{
+    margin-bottom: 0;
+}
+
+#toggle-mobile-menu.active .hamburger .icon-bar:nth-child(1){
+    transform: rotate(45deg);
+    top: 7px;
+    background-color: #354147;
+}
+
+#toggle-mobile-menu.active .hamburger .icon-bar:nth-child(2){
+    background-color: transparent;
+}
+
+#toggle-mobile-menu.active .hamburger .icon-bar:nth-child(3){
+    transform: rotate(-45deg);
+    top: -7px;
+    background-color: #354147;
+
+}
+
+#hero {
+    background-image: url(../img/hero-bg.png);
+    background-position: top center;
+    background-size: cover;
+    min-height: 1694px;
+    padding-top: 287px;
+    display: flex;
+    justify-content: center;
+}
+#hero .hero-content{
+    max-width: 950px;
+}
+#hero h1{
+    text-transform: capitalize;
+}
+
+.subtitle {
+    color: #FBD784;
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 6px;
+    font-weight: 800;
+    position: relative;
+    padding-left: 104px;
+}
+.subtitle::before {
+    content: "";
+    width: 72px;
+    height: 2px;
+    background-color: #FBD784;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 1px);
+}
+#hero .hero-button a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+#hero .hero-button a::after{
+    content: url(../img/arrow-down.svg);
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-12px);
+}
+
+#get-started {
+    margin-top: -600px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#hiking-gear, #map-timing{
+    padding-top: 100px;
+    padding-bottom: 100px; 
+}
+
+.more-button a{
+    color: #FBD784;
+    text-decoration: none;
+    position: relative;
+}
+.more-button a::after{
+    content: url(../img/arrow_right.svg);
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-12px);
+}
+#get-started  .get-started-content, #hiking-gear .hiking-gear-content, #map-timing .map-timing-content{
+    margin-bottom: 50px;
+}
+
+#get-started  .get-started-image, #hiking-gear .hiking-gear-image, #map-timing .map-timing-image{
+    text-align: center;
+}
+footer .footer-brand{
+    text-align: center;
+}
+footer .footer-menu-title{
+    color: #FBD784;
+    font-size: 1.33;
+    margin-bottom: 10px;
+}
+footer .footer-menu-1 ul, footer .footer-menu-2 ul{
+    margin: 0 0 20px 0;
+    padding: 0;
+    list-style: none;
+}
+
+footer .footer-menu-1 ul li, footer .footer-menu-2 ul li{
+    margin-bottom: 10px;
+}
+
+footer .footer-menu-1 ul li a, footer .footer-menu-2 ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+footer .copyright{
+    opacity: 0.5;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+footer .footer-menu-1 , footer .footer-menu-2{
+    max-width: 50%;
+    flex-basis: 50%;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    
+    body{
+        font-size: 18px;
+    }
+    header{
+        display: flex;
+        padding: 64px 10px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    h1{
+        font-size: 4.8em;
+    }
+
+    #toggle-mobile-menu{
+        display: none;
+    }
+   
+    header .main-menu, header .user-menu {
+        display: block;
+    }
+
+    header .mobile-menu  {
+    display: none;
+}
+
+    header .main-menu ul, header .user-menu ul{  
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+
+}
+
+header .main-menu ul li{
+    padding-left: 20px;
+    padding-right: 20px;
+}  
+
+header .main-menu ul li a, header .user-menu ul li a{
+    color: white;
+    text-decoration: none;
+    transition: color 300ms ease-in-out;
+}
+
+header .main-menu ul li a:hover,header .user-menu ul li a:hover{
+    color: #FBD784;
+    text-decoration: none;
+}
+
+header .user-menu ul li.account{
+    padding-left: 32px;
+    position: relative;
+}  
+
+header .user-menu ul li.account::before{
+    content: url('../img/user.svg');
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#get-started{
+    margin-top: -500px;
+}
+#get-started  .get-started-content, #hiking-gear .hiking-gear-content, #map-timing .map-timing-content {
+    max-width: 50%;
+    flex-basis: 50%;
+    }
+
+#get-started  .get-started-image, #hiking-gear .hiking-gear-image, #map-timing .map-timing-image{
+    max-width: 50%;
+    flex-basis: 50%;
+    text-align: right;
+}
+#get-started .row, #hiking-gear .row, #map-timing .row{
+    align-items: center;
+}
+
+#hiking-gear .hiking-gear-image{
+    order: 1;
+    text-align: left;
+}
+#hiking-gear .hiking-gear-content{
+    order: 2;
+}
+
+footer .footer-brand{
+    text-align: left;
+    max-width: 50%;
+    flex-basis: 50%;
+}
+footer .footer-menu-1 , footer .footer-menu-2{
+    max-width: 25%;
+    flex-basis: 25%;
+}
+}  
+
+@media only screen and (min-width: 992px){
+    footer .copyright{
+        text-align: left;
+        margin-top: -50px;    
+    }
+
+    footer .footer-description{
+        max-width: 303px;
+    }
+}
