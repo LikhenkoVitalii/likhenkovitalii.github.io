@@ -1,0 +1,203 @@
+@font-face{
+    font-family: "Raleway";
+    src: url("../fonts/Raleway-Regular.ttf");
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face{
+    font-family: "Raleway";
+    src: url("../fonts/Raleway-Medium.ttf");
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face{
+    font-family: "LeagueSpartan";
+    src: url("../fonts/LeagueSpartan-Bold.ttf");
+    font-weight: 700;
+    font-display: swap;
+}
+body{
+    font-family: Raleway;
+    font-size: 16px;
+    color: #535756;
+}
+
+header{
+    background-color: #E0E0E0;
+}
+.btn-menu{
+    border: 1px solid #535756;
+    border-radius: 0;
+    color: #535756;
+}
+.btn-menu:hover{
+    border: 1px solid #15959A;
+    border-radius: 0;
+    color: #15959A;
+}
+#hero {
+    background-color: #323232;
+    color: #E0E0E0;
+}
+h1, h2,h3,h4,h5,h6{
+    font-family: "LeagueSpartan";
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+h1{
+    font-size: 60px;
+}
+h2{
+    font-size: 54px;
+    color: #535756;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #15959A;
+}
+.herosubtitle{
+    font-size: 30px;
+    margin-bottom: 60px; 
+}
+.outline-btn{
+    font-size: 20px;
+    font-weight: 500;
+    color: #E0E0E0;
+    border: 1px solid #E0E0E0;
+    border-radius: 0;
+}
+.outline-btn:hover{
+    color: #15959A;
+    border: 1px solid #15959A;
+}
+.hero-list{
+    margin: 0;
+    padding: 50px 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.hero-list li{
+    padding-left: 32px;
+    padding-right: 32px;
+    font-size: 20px;
+    letter-spacing: 0.15%;
+}
+.hero-list li a{
+    color: #E0E0E0;
+}
+.hero-list li a:hover{
+    color: #15959A;
+}
+.nav-link:hover{
+    color: #15959A;
+}
+#experience{
+    background-color: #535756;
+    color: white;
+}
+#experience h2{
+    color: #E0E0E0;
+}
+#headliners{
+    padding: 100px 0 50px;
+}
+#trust-factors{
+    background-color: #F2F2F2;
+    padding: 50px 0;
+}
+#testimonials{
+    padding: 50px 0;
+}
+#testimonials h2{
+    margin-bottom: 100px;
+}
+#testimonials h2::before{
+    content: "";
+    width: calc(50% + 64px);
+    height: 1px;
+    background-color: #535756;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+#testimonials h2::after{
+    content: "";
+    width: 50%;
+    height: 1px;
+    background-color: #535756;
+    position: absolute;
+    right: 0;
+    bottom: -24px;
+}
+
+@media screen and (min-width: 992px) {
+    header .navbar-expand-lg .navbar-nav .nav-item .nav-link:not(.bnt){
+        padding-left: 16px;
+        padding-right: 16px;
+}
+.hero-list{
+    margin-top: -100px;
+}
+h1, h2{
+    font-size: 80px;
+}
+#headliners{
+    padding: 200px 0 96px;
+}
+}
+@media screen and (min-width: 1200px){
+    #about h2{
+        transform: rotate(-90deg);
+    }
+    #about{
+        padding-top: 200px!important;
+        padding-bottom: 200px!important;
+    }
+    #experience .rotated{
+        transform: rotate(-90deg);
+    }
+    #experience .col-experience::after{
+        content: "";
+        width: 1px;
+        height: 95%;
+        background-color: white;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 12px;
+    }
+    #experience .col-background::before{
+        content: "";
+        width: 1px;
+        height: 90%;
+        background-color: white;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 12px;
+    }
+    body{
+        font-size: 24px;
+    }
+    #trust-factors{
+        padding: 96px 0;
+    }
+
+    
+}
+@media screen and (min-width: 1320px) {
+    .container {
+        max-width: 1320px;
+    }
+    .hero-list{
+        margin-top: -150px;
+    }
+
+}
+
+
